@@ -1,0 +1,27 @@
+﻿@model Snippets.Models.TestModel
+
+@{
+    ViewBag.Title = "This is a test model view";
+}
+
+<h2>This is a test model view...</h2>
+
+<div>
+
+    <table>
+
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Location</th>
+        </tr>
+
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            <td>@Model.Location</td>
+        </tr>
+
+    </table>
+
+</div>
