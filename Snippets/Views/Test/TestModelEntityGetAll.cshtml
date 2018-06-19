@@ -1,0 +1,32 @@
+﻿@model List<Snippets.Models.TestModel>
+
+@{
+    ViewBag.Title = "This is a test model entity get all View";
+}
+
+<h2>This is a test model entity get all View...</h2>
+
+<div>
+
+    <table>
+
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Location</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Location</td>
+        </tr>
+
+        }
+
+    </table>
+
+</div>
