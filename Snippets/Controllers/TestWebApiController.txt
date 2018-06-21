@@ -1,0 +1,37 @@
+GET http://localhost:52563/api/TestWebApi
+Content-Type: application/xml
+Content-Type: application/json
+
+
+POST http://localhost:52563/api/TestWebApi
+PUT http://localhost:52563/api/TestWebApi/4
+
+Content-Type: application/x-www-form-urlencoded
+
+=Test
+
+
+DELETE http://localhost:52563/api/TestWebApi/4
+
+
+
+POST http://localhost:52563/api/TestWebApi
+
+Content-Type: application/x-www-form-urlencoded
+
+=Test4
+
+
+
+PUT http://localhost:52563/api/TestWebApi/4
+
+Content-Type: application/x-www-form-urlencoded
+
+=Test477
+
+
+
+
+DELETE http://localhost:52563/api/TestWebApi/4
+
+
