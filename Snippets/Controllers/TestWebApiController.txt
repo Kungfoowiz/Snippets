@@ -2,6 +2,8 @@ GET http://localhost:52563/api/TestWebApi
 Content-Type: application/xml
 Content-Type: application/json
 
+Accept: application/xml; q=0.8, application/json; q=0.5
+Accept: application/xml; q=0.5, application/json; q=0.8
 
 POST http://localhost:52563/api/TestWebApi
 PUT http://localhost:52563/api/TestWebApi/4
@@ -33,5 +35,67 @@ Content-Type: application/x-www-form-urlencoded
 
 
 DELETE http://localhost:52563/api/TestWebApi/4
+
+
+
+
+GET
+http://localhost:52563/api/TestWebApi/13
+Accept: application/xml; q=0.5, application/json; q=0.8
+Content-Type: application/json
+
+
+
+POST
+http://localhost:52563/api/TestWebApi
+Accept: application/xml; q=0.5, application/json; q=0.8
+Content-Type: application/json
+
+{"Name":"Macron", "Location":"Quake"}
+
+
+POST
+http://localhost:52563/api/TestWebApi
+Accept: application/xml; q=0.5, application/json; q=0.8
+Content-Type: application/json
+
+{"Name":"Shambler", "Location":"Quake"}
+
+
+
+PUT
+http://localhost:52563/api/TestWebApi/11
+Accept: application/xml; q=0.5, application/json; q=0.8
+Content-Type: application/json
+
+{"Name":"Grunt", "Location":"Quake"}
+
+
+DELETE
+http://localhost:52563/api/TestWebApi/9
+Accept: application/xml; q=0.5, application/json; q=0.8
+Content-Type: application/json
+
+
+
+DELETE
+http://localhost:52563/api/TestWebApi/12
+Accept: application/xml; q=0.5, application/json; q=0.8
+Content-Type: application/json
+
+
+
+
+PUT
+http://localhost:52563/api/TestWebApi/11
+Accept: application/xml; q=0.5, application/json; q=0.8
+Content-Type: application/json
+
+{"Name":"Knight", "Location":"Quake"}
+
+
+
+
+
 
 
