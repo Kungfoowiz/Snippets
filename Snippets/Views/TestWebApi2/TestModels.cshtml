@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>TestModels</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var list = $(".list");
+
+
+            $(".get").click(function () {
+
+                $.ajax({
+                    type: "GET",
+                    url: "api/TestWebApi",
+                    dataType: 'json',
+
+                    success: function (data) {
+
+                        list.empty();
+
+                        $.each(data, function (index, val) {
+                            list.append("<li>" + val.name + " is in " + val.location + "</li>");
+                        });
+
+                    }
+                });
+
+            });
+
+
+            $(".clear").click(function () {
+                list.empty();
+            });
+
+        }
+        );
+    </script>
+
+</head>
+
+<body>
+    <article>
+        <h1>Test Models</h1>
+
+        <section>
+            <button class="get">Get Test Models</button>
+            <button class="clear">Clear data</button>
+        </section>
+
+        <section>
+            <ul class="list"></ul>
+        </section>
+    </article>
+</body>
+
+</html>
