@@ -99,3 +99,32 @@ Content-Type: application/json
 
 
 
+PUT
+http://localhost:52563/api/TestWebApi/11
+Accept: application/xml; q=0.5, application/json; q=0.8
+Content-Type: application/json
+
+{"Name":"Shambler", "Location":"Quake"}
+
+
+
+
+PUT
+http://localhost:52563/api/TestWebApi?name=Vore&Location=Quake
+Accept: application/xml; q=0.5, application/json; q=0.8
+Content-Type: application/json
+
+11
+
+
+
+
+
+PUT
+http://localhost:52563/api/TestWebApi?id=11&name=Zombie&Location=Quake
+Accept: application/xml; q=0.5, application/json; q=0.8
+Content-Type: application/json
+
+
+
+

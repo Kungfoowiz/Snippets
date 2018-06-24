@@ -123,7 +123,9 @@ namespace Snippets.Controllers
         // public void Put(int id, [FromBody]string value)
         // public void Put(int id, [FromBody] TestModel testModel)
         [HttpPut] // Can use custom method name then.
-        public HttpResponseMessage Put(int id, [FromBody] TestModel testModel)
+        // public HttpResponseMessage Put(int id, [FromBody] TestModel testModel)
+        // public HttpResponseMessage Put([FromBody] int id, [FromUri] TestModel testModel)
+        public HttpResponseMessage Put([FromUri] int id, [FromUri] TestModel testModel)
         {
             // data[id] = value;
 
