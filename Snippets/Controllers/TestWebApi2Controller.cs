@@ -13,5 +13,12 @@ namespace Snippets.Controllers
         {
             return View("TestModels");
         }
+
+
+        // GET: TestWebApi2/TestPartial
+        public PartialViewResult TestPartial()
+        {
+            return PartialView();
+        }
     }
 }
