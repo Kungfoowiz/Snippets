@@ -26,7 +26,8 @@
 
                 $.ajax({
                     type: "GET",
-                    url: "api/TestWebApi",
+                    // url: "../api/TestWebApi", // use ../ for relative path AND 'api/TestWebApi' to use relative from current url, i.e. siteRoot/TestWebApi2/api/TestWebApi
+                    url: "/api/TestWebApi",
                     dataType: 'json',
 
                     success: function (data) {
@@ -47,6 +48,34 @@
                 list.empty();
             });
 
+
+
+
+            $(".get-partial").click(function () {
+
+                $.ajax({
+                    type: "GET",
+                    url: "/TestWebApi2/TestPartial",
+                    contentType: 'application/html; charset=utf-8',
+                    dataType: 'html' //,
+                    //success: function (data) {
+                    //    $(".partial-view").html(data);
+                    //},
+                    //error: function () {
+                    //    $(".partial-view").html = "Error getting test partial view.";
+                    //}
+                // jQuery 3 style callbacks.
+                }).done(function (data) {
+                    $(".partial-view").html(data);
+                })
+                .fail(function () {
+                    $(".partial-view").html = "Error getting test partial view.";
+                });
+
+            });
+
+
+
         }
         );
     </script>
@@ -66,6 +95,15 @@
             <ul class="list"></ul>
         </section>
     </article>
+
+    <aside style="margin-top: 30px;">
+
+        <button class="get-partial">Get Partial View</button>
+
+        <article class="partial-view" style="margin-top: 100px;"></article>
+
+    </aside>
+
 </body>
 
 </html>
